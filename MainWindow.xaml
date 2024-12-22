@@ -1,0 +1,42 @@
+﻿<Window x:Class="LamLaiQuanLyBanHang.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LamLaiQuanLyBanHang"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        Loaded="Window_Loaded">
+    <Grid>
+        <Label Content="Mã sản phẩm" HorizontalAlignment="Left" Margin="70,34,0,0" VerticalAlignment="Top"/>
+        <Label Content="Tên sản phẩm" HorizontalAlignment="Left" Margin="70,74,0,0" VerticalAlignment="Top"/>
+        <Label Content="Loại sản phẩm" HorizontalAlignment="Left" Margin="70,115,0,0" VerticalAlignment="Top"/>
+        <Label Content="Số lượng" HorizontalAlignment="Left" Margin="70,160,0,0" VerticalAlignment="Top"/>
+        <Label Content="Đơn giá" HorizontalAlignment="Left" Margin="70,195,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtmasp" HorizontalAlignment="Left" Margin="200,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167"/>
+        <TextBox x:Name="txttensp" HorizontalAlignment="Left" Margin="200,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167"/>
+        <TextBox x:Name="txtsoluongco" HorizontalAlignment="Left" Margin="200,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167"/>
+        <TextBox x:Name="txtdongia" HorizontalAlignment="Left" Margin="200,199,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167"/>
+        <ComboBox Name="cboloaisp" HorizontalAlignment="Left" Margin="200,119,0,0" VerticalAlignment="Top" Width="120"/>
+        <DataGrid Name="dtgsanpham" VerticalAlignment="Top" d:ItemsSource="{d:SampleData ItemCount=5}"         
+          CanUserAddRows="False"
+          SelectedCellsChanged="dtgsanpham_SelectedCellsChanged"
+          AutoGenerateColumns="False"
+          Margin="40,235,40,45">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Mã SP" Binding="{Binding MaSp}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Tên SP" Binding="{Binding TenSp}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Mã LSP" Binding="{Binding MaLoai}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Số lượng" Binding="{Binding SoLuong}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Đơn giá" Binding="{Binding DonGia}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Thành tiền" Binding="{Binding ThanhTien}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Name="btnthem" Content="Thêm" HorizontalAlignment="Left" Margin="120,382,0,0" VerticalAlignment="Top" Click="btnthem_Click"/>
+        <Button Name="btnsua" Content="Sửa" HorizontalAlignment="Left" Margin="206,382,0,0" VerticalAlignment="Top" Click="btnsua_Click" Width="43"/>
+        <Button Name="btnxoa" Content="Xoá" HorizontalAlignment="Left" Margin="288,382,0,0" VerticalAlignment="Top" Click="btnxoa_Click" Width="43"/>
+        <Button Name="btntim" Content="Tìm" HorizontalAlignment="Left" Margin="368,382,0,0" VerticalAlignment="Top" Click="btntim_Click" Width="43"/>
+        <Button Name="btnthongke" Content="Thống kê" HorizontalAlignment="Left" Margin="467,382,0,0" VerticalAlignment="Top" Width="67" Click="btnthongke_Click"/>
+
+    </Grid>
+</Window>

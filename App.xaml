@@ -1,0 +1,32 @@
+﻿<Application x:Class="LamLaiQuanLyBanHang.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:LamLaiQuanLyBanHang"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Style x:Key="labelstyle" TargetType="Label">
+            <Setter Property="Margin" Value="10,10,10,0"/>
+        </Style>
+        <Style x:Key="textboxstyle" TargetType="TextBox">
+            <Setter Property="FontFamily" Value="Times New Roman"/>
+            <Setter Property="FontStyle" Value="Italic"/>
+            <Setter Property="Foreground" Value="Blue"/>
+            <!-- Màu chữ xanh -->
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="Margin" Value="10,10,10,0"/>
+            <Setter Property="Height" Value="25"/>
+        </Style>
+
+        <Style x:Key="datagridcolumnheaderstyle" TargetType="DataGridColumnHeader">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+        <ControlTemplate x:Key="buttontemplate" TargetType="Button">
+            <Grid>
+                <Ellipse Fill="Cyan"/>
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Grid>
+        </ControlTemplate>
+    </Application.Resources>
+</Application>
